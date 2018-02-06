@@ -1,9 +1,8 @@
 # redux-put-take
-Tiny side effects handler for redux with async/await.
 
 ## what is this?
-
-The redux standard API does not have an easy way to subscribe Actions and unsubscribe them.added this as a lightweight function.
+Tiny side effects handler for redux with async/await. inspired by [redux-saga](https://www.npmjs.com/package/redux-saga).
+This middleware given two API for store. Store can be await action and can dispatch action in colutine.
 
 ## install
 
@@ -29,7 +28,7 @@ const reducer = (state = initialState, action) => {
     }
   }
 }
-const store = createStore(reducer(), dushMiddleware())
+const store = createStore(reducer(), putTakeMiddleware())
 runService(store)
 ```
 ## usage
@@ -40,8 +39,7 @@ runService(store)
 const type = 'SET_COUNT'
 const payload = { count: 0 }
 const setCount = (action = { payload: 0 }) => {
-  const { payload } = action
-  return { type, payload }
+  return { type, payload: action.payload }
 }
 
 async function watch (store) {
