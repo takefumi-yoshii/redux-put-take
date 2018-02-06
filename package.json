@@ -1,0 +1,47 @@
+{
+  "name": "redux-put-take",
+  "version": "0.0.0",
+  "description": "Tiny side effects handler for redux with async/await.",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "jest ./src --watch",
+    "test": "jest ./src",
+    "build": "babel src --out-dir dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/takefumi-yoshii/redux-put-take.git"
+  },
+  "author": "takefumi-yoshii",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/takefumi-yoshii/redux-put-take/issues"
+  },
+  "homepage": "https://github.com/takefumi-yoshii/redux-put-take#readme",
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": true
+          }
+        }
+      ]
+    ],
+    "plugins": [
+      "transform-object-rest-spread"
+    ]
+  },
+  "dependencies": {
+    "mitt": "1.1.3"
+  },
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.0",
+    "babel-plugin-transform-object-rest-spread": "6.26.0",
+    "babel-preset-env": "1.6.1",
+    "jest": "22.1.4",
+    "redux": "3.7.2"
+  }
+}
