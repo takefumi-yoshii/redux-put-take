@@ -1,6 +1,6 @@
 {
   "name": "redux-put-take",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Tiny side effects handler for redux with async/await.",
   "main": "dist/index.js",
   "scripts": {
